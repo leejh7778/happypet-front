@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { PiChatDots } from 'react-icons/pi';
 import { BsCalendarCheck } from 'react-icons/bs';
 import axios from 'axios';
-import { useNavigate } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 
 const MyPage = ({ onLogout }) => {
   const [reservations, setReservations] = useState([]);
@@ -76,8 +76,8 @@ const MyPage = ({ onLogout }) => {
 
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-9 mt-20">
         {/* 나의 예약 카드 */}
-        <a
-          href="/mypage/reservation"
+        <Link
+          to="/reservation"
           className="flex flex-col p-8 bg-[#f1f3ea] rounded-lg shadow-lg hover:shadow-2xl transition-shadow w-80 h-48"
         >
           <div className="flex items-center justify-between mb-4">
@@ -95,7 +95,7 @@ const MyPage = ({ onLogout }) => {
                   {reservations.map((reservation, index) => (
                     <li key={index} className="mb-2">
                       <a
-                        href={`/mypage/reseravtion/${reservation.id}`}
+                        href={`/#/mypage/reseravtion/${reservation.id}`}
                         className="text-blue-500 underline"
                       ></a>
                     </li>
@@ -106,11 +106,11 @@ const MyPage = ({ onLogout }) => {
               <p className=" font-Kr font-medium">예약 내역이 없습니다.</p>
             )}
           </div>
-        </a>
+        </Link>
 
         {/* 1:1 문의 카드 */}
-        <a
-          href="/mypage/inquiry"
+        <Link
+          to="/inquiry"
           className="flex flex-col p-8 bg-[#f1f3ea] rounded-lg shadow-lg hover:shadow-2xl transition-shadow w-300 h-48"
         >
           <div className="flex items-center justify-between mb-4">
@@ -128,7 +128,7 @@ const MyPage = ({ onLogout }) => {
                   {inquiries.map((inquiry, index) => (
                     <li key={index} className="mb-2">
                       <a
-                        href={`/mypage/inquiry/${inquiry.id}`}
+                        href={`/#/mypage/inquiry/${inquiry.id}`}
                         className="text-blue-500 underline"
                       ></a>
                     </li>
@@ -139,7 +139,7 @@ const MyPage = ({ onLogout }) => {
               <p className="font-Kr font-medium">문의 내역이 없습니다.</p>
             )}
           </div>
-        </a>
+        </Link>
       </div>
 
       {/* 탈퇴 버튼 */}
