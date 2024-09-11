@@ -95,7 +95,7 @@ const MyPage = ({ onLogout }) => {
                   {reservations.map((reservation, index) => (
                     <li key={index} className="mb-2">
                       <a
-                        href={`/inquiries/${reservation.id}`}
+                        href={`/mypage/reseravtion/${reservation.id}`}
                         className="text-blue-500 underline"
                       ></a>
                     </li>
@@ -128,7 +128,7 @@ const MyPage = ({ onLogout }) => {
                   {inquiries.map((inquiry, index) => (
                     <li key={index} className="mb-2">
                       <a
-                        href={`/inquiries/${inquiry.id}`}
+                        href={`/mypage/inquiry/${inquiry.id}`}
                         className="text-blue-500 underline"
                       ></a>
                     </li>
