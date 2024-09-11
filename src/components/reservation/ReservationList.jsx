@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import { FaTrashAlt } from 'react-icons/fa';
 import ReservModal from '../map/ReservModal';
-import { LuArrowBigUpDash } from "react-icons/lu";
+import { LuArrowBigUpDash } from 'react-icons/lu';
 
 function ReservationList() {
   const userid = localStorage.getItem('userid');
@@ -14,7 +14,7 @@ function ReservationList() {
     const getReservationList = async () => {
       try {
         const resp = await axios.get(
-          `http://localhost:8080/get_reserv/${userid}`
+          `https://happypet.aiccchant.com/get_reserv/${userid}`
         );
         setReservationList(resp.data);
       } catch (error) {
@@ -30,7 +30,7 @@ function ReservationList() {
     if (confirmDeletion) {
       try {
         await axios.delete(
-          `http://localhost:8080/delete_reserv/${reservation.reserv_idx}`
+          `https://happypet.aiccchant.com/delete_reserv/${reservation.reserv_idx}`
         );
         alert('삭제되었습니다.');
         setReservationList((prevList) =>

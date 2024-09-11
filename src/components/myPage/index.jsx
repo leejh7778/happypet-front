@@ -23,10 +23,10 @@ const MyPage = ({ onLogout }) => {
       try {
         // API 호출로 예약 데이터와 문의 데이터를 가져옵니다.
         const [reservationsResponse, inquiriesResponse] = await Promise.all([
-          axios.get(`http://localhost:8080/get_reserv/${userid}`, {
+          axios.get(`https://happypet.aiccchant.com/get_reserv/${userid}`, {
             headers: { Authorization: `Bearer ${token}` },
           }),
-          axios.get(`http://localhost:8080/get_inq/${userid}`, {
+          axios.get(`https://happypet.aiccchant.com/get_inq/${userid}`, {
             headers: { Authorization: `Bearer ${token}` },
           }),
         ]);
@@ -49,7 +49,7 @@ const MyPage = ({ onLogout }) => {
       const userid = localStorage.getItem('userid');
 
       try {
-        await axios.delete(`http://localhost:8080/delete_account/`, {
+        await axios.delete(`https://happypet.aiccchant.com/delete_account/`, {
           headers: {
             Authorization: `Bearer ${token}`,
           },

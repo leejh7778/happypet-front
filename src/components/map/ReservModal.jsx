@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import './modal.css';
 
-function ReservModal({ onClose, reservation,hospitalName,hospitalPn }) {
+function ReservModal({ onClose, reservation, hospitalName, hospitalPn }) {
   const [formData, setFormData] = useState({
     username: '',
     pn: '',
@@ -54,7 +54,7 @@ function ReservModal({ onClose, reservation,hospitalName,hospitalPn }) {
       if (isEdit) {
         // 예약 수정
         await axios.patch(
-          `http://localhost:8080/update_reserv/${reservation.reserv_idx}`,
+          `https://happypet.aiccchant.com/update_reserv/${reservation.reserv_idx}`,
           {
             ...formData,
             userid,
@@ -63,7 +63,7 @@ function ReservModal({ onClose, reservation,hospitalName,hospitalPn }) {
         alert('예약이 수정되었습니다.');
       } else {
         // 새로운 예약
-        await axios.post('http://localhost:8080/post_reserv', {
+        await axios.post('https://happypet.aiccchant.com/post_reserv', {
           ...formData,
           userid,
         });
@@ -164,7 +164,7 @@ function ReservModal({ onClose, reservation,hospitalName,hospitalPn }) {
               </div>
             </div>
             <div className="modal-actions font-semibold justify-end">
-              <button className='mx-5' type="button" onClick={handleSubmit}>
+              <button className="mx-5" type="button" onClick={handleSubmit}>
                 {isEdit ? '수정하기' : '예약하기'}
               </button>
               <button type="button" onClick={onClose}>
