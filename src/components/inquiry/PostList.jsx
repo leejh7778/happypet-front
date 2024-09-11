@@ -14,7 +14,7 @@ function PostList() {
     const getPostList = async () => {
       try {
         const resp = await axios.get(
-          `https://happypet.aiccchant.com/get_inq/${userid}`
+          `https://happypetback.aiccchant.com/get_inq/${userid}`
         );
         setPostList(resp.data);
       } catch (error) {
@@ -30,7 +30,7 @@ function PostList() {
     if (confirmDeletion) {
       try {
         await axios.delete(
-          `https://happypet.aiccchant.com/delete_inq/${post.inq_idx}`
+          `https://happypetback.aiccchant.com/delete_inq/${post.inq_idx}`
         );
         alert('삭제되었습니다.');
 

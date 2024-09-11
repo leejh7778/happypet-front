@@ -33,7 +33,7 @@ const Register = () => {
     }
 
     axios
-      .post('https://happypet.aiccchant.com/register', {
+      .post('https://happypetback.aiccchant.com/register', {
         userid: values.userid,
         password: values.password,
         username: values.username,

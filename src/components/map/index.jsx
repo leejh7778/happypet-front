@@ -24,7 +24,7 @@ function Map() {
   // 병원 데이터를 가져오는 함수
   const fetchHospitals = async () => {
     try {
-      const res = await fetch('https://happypet.aiccchant.com/hospitals');
+      const res = await fetch('https://happypetback.aiccchant.com/hospitals');
       if (!res.ok) {
         throw new Error('Network response was not ok.');
       }

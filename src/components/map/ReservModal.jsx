@@ -54,7 +54,7 @@ function ReservModal({ onClose, reservation, hospitalName, hospitalPn }) {
       if (isEdit) {
         // 예약 수정
         await axios.patch(
-          `https://happypet.aiccchant.com/update_reserv/${reservation.reserv_idx}`,
+          `https://happypetback.aiccchant.com/update_reserv/${reservation.reserv_idx}`,
           {
             ...formData,
             userid,
@@ -63,7 +63,7 @@ function ReservModal({ onClose, reservation, hospitalName, hospitalPn }) {
         alert('예약이 수정되었습니다.');
       } else {
         // 새로운 예약
-        await axios.post('https://happypet.aiccchant.com/post_reserv', {
+        await axios.post('https://happypetback.aiccchant.com/post_reserv', {
           ...formData,
           userid,
         });

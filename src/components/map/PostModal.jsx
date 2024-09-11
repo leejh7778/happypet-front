@@ -52,7 +52,7 @@ function PostModal({ onClose, post }) {
       if (isEdit) {
         // 예약 수정
         await axios.patch(
-          `https://happypet.aiccchant.com/update_inq/${post.inq_idx}`,
+          `https://happypetback.aiccchant.com/update_inq/${post.inq_idx}`,
           {
             ...formData,
             userid,
@@ -61,7 +61,7 @@ function PostModal({ onClose, post }) {
         alert('예약이 수정되었습니다.');
       } else {
         // 새로운 예약
-        await axios.post('https://happypet.aiccchant.com/post_inq', {
+        await axios.post('https://happypetback.aiccchant.com/post_inq', {
           ...formData,
           userid,
         });
