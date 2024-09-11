@@ -2,7 +2,7 @@ import React from 'react';
 import PostList from './PostList';
 import PageTitle from '../PageTitle';
 
-function InquiryBoard() {
+function Inquiry() {
   return (
     <div className="container min-h-[65vh] text-2xl font-bold ">
       <PageTitle title="1:1 문의" />
@@ -11,4 +11,4 @@ function InquiryBoard() {
   );
 }
 
-export default InquiryBoard;
+export default Inquiry;
