@@ -77,7 +77,7 @@ const MyPage = ({ onLogout }) => {
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-9 mt-20">
         {/* 나의 예약 카드 */}
         <a
-          href="/reservation"
+          href="/mypage/reservation"
           className="flex flex-col p-8 bg-[#f1f3ea] rounded-lg shadow-lg hover:shadow-2xl transition-shadow w-80 h-48"
         >
           <div className="flex items-center justify-between mb-4">
@@ -110,7 +110,7 @@ const MyPage = ({ onLogout }) => {
 
         {/* 1:1 문의 카드 */}
         <a
-          href="/inquiry"
+          href="/mypage/inquiry"
           className="flex flex-col p-8 bg-[#f1f3ea] rounded-lg shadow-lg hover:shadow-2xl transition-shadow w-300 h-48"
         >
           <div className="flex items-center justify-between mb-4">
