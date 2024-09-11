@@ -1,0 +1,36 @@
+name: happypet
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Source Code
+        uses: actions/checkout@v4
+
+      - name: Create .env file
+        run: |
+          touch .env
+          echo "${{ secrets.REACT_APP_NAVER_MAP_API_KEY }}" > .env
+      - name: Sign in to Docker Hub
+        run: docker login -u ${{ secrets.DOCKER_USERNAME }} -p ${{ secrets.DOCKER_PASSWORD }}
+      - name: Build Docker Image
+        run: docker build -t leejh7778/happypet-front .
+      - name: Push Docker Image
+        run: docker push leejh7778/happypet-front:latest
+
+  deploy:
+    needs: build
+    runs-on: aws-ec2
+
+    steps:
+      - name: Pull image from docker hub
+        run: docker pull leejh7778/happypet-front:latest
+      - name: Delete existing container
+        run: docker rm -f reactContainer
+      - name: Run container
+        run: docker run -d -p 80:80 --name reactContainer leejh7778/happypet-front
