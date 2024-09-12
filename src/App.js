@@ -1,5 +1,11 @@
 import React, { useState, useEffect } from 'react';
-import { Routes, Route, useNavigate, HashRouter } from 'react-router-dom';
+import {
+  Routes,
+  Route,
+  useNavigate,
+  HashRouter,
+  BrowserRouter,
+} from 'react-router-dom';
 import Home from './components/home';
 import Login from './components/login/index';
 import Register from './components/register/index';
@@ -68,8 +74,8 @@ function App() {
 
 export default function WrappedApp() {
   return (
-    <HashRouter>
+    <BrowserRouter>
       <App />
-    </HashRouter>
+    </BrowserRouter>
   );
 }
