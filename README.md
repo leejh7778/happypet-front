@@ -1,4 +1,4 @@
-<h1 align="center">AICC Project 1 - HappyPet (Frontend)</h1>
+<h1 align="center">AICC Project 1 - HappyPet </h1>
 <h3 align="center">동물병원 조회 및 예약문의 서비스</h3>
 
 ## 프로젝트 소개
