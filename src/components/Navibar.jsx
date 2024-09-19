@@ -10,7 +10,7 @@ const Navibar = () => {
           className="font-Kr flex justify-center items-center text-cyan-700 "
         >
           <img src={PetLogo} alt="" className=" w-[25%] h-[25%]" />
-          <span className=" font-bold">해피펫....</span>
+          <span className=" font-bold">해피펫</span>
         </Link>
       </div>
 
