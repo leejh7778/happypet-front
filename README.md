@@ -24,6 +24,8 @@
 3. $ npm start
 ```
 
+- 로컬 서버는 기본적으로 http://localhost:3000 에서 실행됩니다.
+
 ## Stacks 🐈
 
 
