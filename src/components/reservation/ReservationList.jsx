@@ -50,18 +50,20 @@ function ReservationList() {
   };
 
   return (
-    <div className="text-sm font-Aa min-w-[845px]">
+    <div className="text-sm font-Aa w-full min-w-[300px] lg:min-w-[845px]">
       {reservationList.map((reservation) => (
         <div key={reservation.reserv_idx} className="flex flex-col m-3">
-          <div className="bg-[#f1f3ea] w-full flex justify-between items-center py-5 rounded-lg">
-            <div className="flex items-center px-5">
-              <div className="px-5">
+          <div className="bg-[#f1f3ea] w-full flex flex-col lg:flex-row justify-between items-start lg:items-center py-5 rounded-lg relative">
+            {' '}
+            {/* 반응형 flex 적용 */}
+            <div className="flex flex-col lg:flex-row items-start lg:items-center px-5 mb-4 lg:mb-0">
+              <div className="lg:mr-6">
                 <p>
-                  <span className="font-bold text-green-900">병원 : </span>{' '}
+                  <span className="font-bold text-green-900">병원: </span>
                   {reservation.hosp_name}
                 </p>
                 <p>
-                  <span className="font-bold text-green-700">병원 번호 : </span>{' '}
+                  <span className="font-bold text-green-700">병원 번호: </span>
                   {reservation.hosp_pn}
                 </p>
               </div>
@@ -72,9 +74,11 @@ function ReservationList() {
                 {reservation.etc ? '기타 ' : ''}
               </p>
             </div>
-            <p className="text-gray-700 px-3">예약 날짜: {reservation.date}</p>
-            <div className="rounded-lg flex justify-center items-center">
-              <div className="px-6">
+            <p className="text-gray-700 px-5 lg:px-3 lg:mr-6 mb-4 lg:mb-0">
+              예약 날짜: {reservation.date}
+            </p>
+            <div className="absolute bottom-3 right-3 lg:static lg:ml-auto flex justify-end items-center">
+              <div className="px-4">
                 <button
                   onClick={() => handleEditClickR(reservation)}
                   className="w-10 h-10 flex justify-center items-center"
@@ -84,7 +88,7 @@ function ReservationList() {
               </div>
               <button
                 onClick={() => deleteReserv(reservation)}
-                className="w-10 h-10"
+                className="w-10 h-10 ml-2"
               >
                 <FaTrashAlt className="w-5 h-5" />
               </button>
@@ -92,9 +96,10 @@ function ReservationList() {
           </div>
         </div>
       ))}
+
       {isModalOpen && currentReservation && (
         <ReservModal
-          reservation={currentReservation} // 선택된 예약 전달
+          reservation={currentReservation}
           onClose={() => setIsModalOpen(false)}
         />
       )}

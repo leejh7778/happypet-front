@@ -6,7 +6,7 @@ const PageTitle = ({ title }) => {
       <span className="relative inline-block transform -translate-y-2">
         {title}
       </span>
-      <span className="under-bar absolute w-full h-[3px] bg-gray-300 left-0 bottom-0"></span>
+      <span className="under-bar absolute w-full h-[3px] bg-[#e0e0e0] left-0 bottom-0"></span>
     </div>
   );
 };
