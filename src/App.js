@@ -38,13 +38,13 @@ function App() {
   };
 
   return (
-    <div className="z-0 flex flex-col justify-between items-center min-h-screen min-w-[970px]">
-      <nav className="z-10 header w-full backdrop-blur-sm">
+    <div className="z-0 flex flex-col justify-between items-center min-h-screen w-full lg:min-w-[970px]">
+      <nav className="z-[1000] header w-full border-[#e0e0e0] backdrop-blur-sm">
         <Header isLoggedIn={isLoggedIn} onLogout={handleLogout} />
         <Navibar />
       </nav>
 
-      <div className="w-[80%] flex justify-center items-center">
+      <div className="w-full lg:w-[80%] flex justify-center items-center px-4">
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/map" element={<Map />} />
@@ -55,11 +55,11 @@ function App() {
           <Route path="/inquiry" element={<Inquiry />} />
           <Route path="/register" element={<Register />} />
           <Route path="/reservation" element={<Reservation />} />
-
           <Route path="/About" element={<About />} />
         </Routes>
       </div>
-      <footer className="footer translate-y-[-100%] h-5 w-full mt-2 relative-">
+
+      <footer className="footer translate-y-[-100%] h-5 w-full mt-2">
         <Footer />
       </footer>
     </div>
