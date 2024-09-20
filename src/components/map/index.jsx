@@ -5,6 +5,7 @@ import ReservModal from './ReservModal';
 import PageTitle from '../PageTitle';
 import marker from '../../assets/image/marker.png';
 import PostModal from './PostModal';
+import { TfiTarget } from 'react-icons/tfi';
 
 function Map() {
   const mapRef = useRef(null);
