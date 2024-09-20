@@ -20,7 +20,7 @@ const About = () => {
             </h4>
             <p className="pb-4 md:pb-6">
               해피펫(HappyPet)은 반려동물 보호자들이 신뢰할 수 있는 동물병원을
-              쉽게 찾을 수 있도록 돕기 위해 설립된 플랫폼입니다...
+              쉽게 찾을 수 있도록 돕기 위해 설립된 플랫폼입니다.
             </p>
 
             <hr className="border-t-2 border-[#e0e0e0] my-6" />
@@ -31,7 +31,7 @@ const About = () => {
             </h4>
             <p className="pb-4 md:pb-6">
               해피펫은 2023년, 반려동물을 사랑하는 몇몇 열정적인 보호자들에 의해
-              시작되었습니다...
+              시작되었습니다.
             </p>
 
             <hr className="border-t-2 border-[#e0e0e0] my-6" />
@@ -68,7 +68,7 @@ const About = () => {
             </h4>
             <p className="pb-4 md:pb-6">
               해피펫은 신뢰할 수 있는 동물병원들과의 파트너십을 통해
-              보호자들에게 최상의 의료 서비스를 제공합니다...
+              보호자들에게 최상의 의료 서비스를 제공합니다.
             </p>
 
             <h4 className="font-bold text-xl md:text-2xl pb-3">
@@ -77,7 +77,7 @@ const About = () => {
             </h4>
             <p className="pb-4 md:pb-6">
               해피펫은 반려동물과 보호자 간의 유대가 그 무엇과도 비교할 수 없는
-              특별한 관계임을 알고 있습니다...
+              특별한 관계임을 알고 있습니다.
             </p>
 
             <h4 className="font-bold text-xl md:text-2xl pb-3">
@@ -86,7 +86,7 @@ const About = () => {
             </h4>
             <p className="pb-4 md:pb-6">
               해피펫은 사용자 정보의 보안을 최우선으로 생각하며, 모든 데이터는
-              안전하게 관리됩니다...
+              안전하게 관리됩니다.
             </p>
 
             <h4 className="font-bold text-xl md:text-2xl pb-3">
@@ -95,7 +95,7 @@ const About = () => {
             </h4>
             <p className="pb-4 md:pb-6">
               해피펫은 반려동물 보호자들에게 유용한 정보를 제공하는 다양한
-              리소스를 제공합니다...
+              리소스를 제공합니다.
             </p>
 
             <h4 className="font-semibold text-lg md:text-xl pb-2">
