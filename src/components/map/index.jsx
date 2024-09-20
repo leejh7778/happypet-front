@@ -68,7 +68,7 @@ function Map() {
         tileDuration: 200,
         zoom: 14,
         zoomControl: true,
-        zoomControlOptions: { position: naver.maps.Position.Right_Center },
+        zoomControlOptions: { position: naver.maps.Position.RIGHT_CENTER },
       };
       mapRef.current = new naver.maps.Map('map', mapOptions);
 
@@ -280,6 +280,24 @@ function Map() {
     },
   };
 
+  const moveToCurrentLocation = (e) => {
+    e.preventDefault();
+    if (navigator.geolocation) {
+      navigator.geolocation.getCurrentPosition(
+        (position) => {
+          const { latitude, longitude } = position.coords;
+          const newLocation = new window.naver.maps.LatLng(latitude, longitude);
+          mapRef.current.setCenter(newLocation);
+        },
+        (error) => {
+          console.error('오류:', error);
+        }
+      );
+    } else {
+      alert('브라우저에서 위치 정보 서비스를 지원하지 않습니다.');
+    }
+  };
+
   const handleChange = (e) => {
     e.preventDefault();
     setAddress(e.target.value); // address 상태 업데이트
@@ -331,6 +349,13 @@ function Map() {
         >
           <form style={styles.searchForm}>
             <div style={styles.searchContainer}>
+              <button
+                type="button"
+                onClick={moveToCurrentLocation}
+                className="p-2"
+              >
+                <TfiTarget className="w-5 h-5" />
+              </button>
               <input
                 type="text"
                 placeholder="주소로 검색"
